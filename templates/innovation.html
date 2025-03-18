@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="innovation-section">
+    <h1>AI Innovations</h1>
+    <p>Discover groundbreaking AI innovations shaping the future.</p>
+
+    <div class="innovation-grid">
+        <div class="innovation-card">
+            <img src="{{ url_for('static', filename='images/ai_healthcare.jpg') }}" alt="AI in Healthcare">
+            <h2>AI in Healthcare</h2>
+            <p>Artificial Intelligence is revolutionizing diagnostics, treatment plans, and patient care.</p>
+            <a href="#">Read More</a>
+        </div>
+
+        <div class="innovation-card">
+            <img src="{{ url_for('static', filename='images/ai_automation.jpg') }}" alt="AI in Automation">
+            <h2>AI in Automation</h2>
+            <p>Smart AI-powered automation is transforming industries and boosting efficiency.</p>
+            <a href="#">Read More</a>
+        </div>
+
+        <div class="innovation-card">
+            <img src="{{ url_for('static', filename='images/ai_ethics.jpg') }}" alt="AI Ethics">
+            <h2>Ethics in AI</h2>
+            <p>Ensuring AI remains fair, unbiased, and aligned with human values.</p>
+            <a href="#">Read More</a>
+        </div>
+
+        <div class="innovation-card">
+            <img src="{{ url_for('static', filename='images/ai_nlp.jpg') }}" alt="AI in NLP">
+            <h2>Natural Language Processing</h2>
+            <p>Advancements in NLP enable AI to understand and process human language better than ever.</p>
+            <a href="#">Read More</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

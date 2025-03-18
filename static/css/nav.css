@@ -1,0 +1,67 @@
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: rgba(90, 90, 90, 0.2);  /* Lighter transparency */
+    backdrop-filter: blur(12px); /* Stronger blur for a glossy effect */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3); /* Slight glow effect */
+    transition: top 0.5s ease-in-out, backdrop-filter 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.navbar.hidden {
+    top: -80px;  /* Moves navbar up out of view */
+    opacity: 0;
+}
+
+/* Navbar remains glossy even when scrolling */
+.navbar.visible {
+    background: rgba(90, 90, 90, 0.3); /* Slightly darker transparency */
+    backdrop-filter: blur(14px); /* Extra glossy effect */
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.4); /* Stronger glow */
+}
+
+/* Navbar Logo */
+.navbar .logo {
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+}
+
+/* Nav Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffcc00;
+}
+
+/* Mobile Menu */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+

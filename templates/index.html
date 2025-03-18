@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="hero">
+    <div id="imageSliderContainer">
+        <div id="imageSlider">
+            <div class="slide" style="background-image: url('{{ url_for('static', filename='images/hero/11.jpeg') }}');"></div>
+            <div class="slide" style="background-image: url('{{ url_for('static', filename='images/hero/12.jpg') }}');"></div>
+            <div class="slide" style="background-image: url('{{ url_for('static', filename='images/hero/13.jpg') }}');"></div>
+            <div class="slide" style="background-image: url('{{ url_for('static', filename='images/hero/14.jpg') }}');"></div>
+        </div>
+
+        <!-- Quote Overlay -->
+        <div class="quote-overlay"></div>
+
+        <!-- Slider Dots -->
+        <div class="slider-dots">
+            <div class="dot active" data-index="0"></div>
+            <div class="dot" data-index="1"></div>
+            <div class="dot" data-index="2"></div>
+            <div class="dot" data-index="3"></div>
+        </div>
+    </div>
+</section>
+
+<!-- AI Features Section -->
+<section class="features">
+
+    <!-- Feature 1: Revolutionizing AI Research -->
+    <div class="feature-row left">
+        <img src="{{ url_for('static', filename='images/images.jpeg') }}" alt="AI Image 1">
+        <div class="feature-text">
+            <h2>Revolutionizing AI Research</h2>
+            <p>Artificial Intelligence is evolving rapidly, and we are at the forefront of this revolution. Our research explores 
+               state-of-the-art machine learning models, neural networks, and data-driven approaches that push the boundaries of 
+               what AI can achieve. From natural language processing (NLP) and computer vision to generative adversarial networks (GANs), 
+               our focus is on developing intelligent systems that learn, adapt, and improve autonomously. 
+               By leveraging vast datasets and high-performance computing, we continue to innovate and redefine the future of AI.</p>
+            <p>Our teams work with reinforcement learning, unsupervised and supervised learning techniques, 
+               and deep neural networks to ensure AI advancements benefit society while maintaining ethical 
+               considerations and transparency.</p>
+        </div>
+    </div>
+
+    <!-- Feature 2: AI for Real-World Applications -->
+    <div class="feature-row right">
+        <div class="feature-text">
+            <h2>AI for Real-World Applications</h2>
+            <p>Artificial Intelligence is no longer confined to research labs; it has become an integral part of 
+               real-world applications across various industries. We focus on deploying AI solutions in healthcare, 
+               where machine learning assists in diagnosing diseases, predicting patient outcomes, and enhancing medical imaging. 
+               In finance, AI-driven algorithms optimize trading strategies, detect fraudulent transactions, and automate risk assessments.</p>
+            <p>Beyond healthcare and finance, AI powers automation in industries such as manufacturing, 
+               logistics, and smart cities, making operations more efficient and cost-effective. 
+               AI chatbots and virtual assistants are transforming customer service, while autonomous vehicles 
+               and robotics are redefining transportation and supply chain management. Our mission is to integrate AI into everyday life, 
+               making it smarter, safer, and more efficient.</p>
+        </div>
+        <img src="{{ url_for('static', filename='images/images.jpeg') }}" alt="AI Image 2">
+    </div>
+
+    <!-- Feature 3: Deep Learning & Neural Networks -->
+    <div class="feature-row left">
+        <img src="{{ url_for('static', filename='images/images.jpeg') }}" alt="AI Image 3">
+        <div class="feature-text">
+            <h2>Deep Learning & Neural Networks</h2>
+            <p>Deep learning, a subset of machine learning, has transformed AI by enabling computers to learn from vast amounts of data. 
+               Our research focuses on building and training deep neural networks that can recognize speech, 
+               analyze images, and even generate human-like text. Convolutional Neural Networks (CNNs) power 
+               facial recognition systems, while Recurrent Neural Networks (RNNs) enhance natural language processing.</p>
+            <p>We implement Transformer-based architectures like BERT and GPT to advance language understanding, 
+               sentiment analysis, and text generation. Our deep learning models are fine-tuned to make AI systems 
+               more precise, enabling breakthroughs in fields like medical diagnostics, self-driving cars, and personalized recommendations.</p>
+        </div>
+    </div>
+
+    <!-- Feature 4: AI Ethics & Transparency -->
+    <div class="feature-row right">
+        <div class="feature-text">
+            <h2>AI Ethics & Transparency</h2>
+            <p>As AI systems become more powerful, the need for ethical considerations and transparency grows. 
+               We are committed to responsible AI development by ensuring fairness, avoiding bias, 
+               and making AI decisions interpretable. AI-driven algorithms should not reinforce discrimination 
+               or biases present in historical data; therefore, we incorporate explainable AI (XAI) techniques 
+               to make model predictions more understandable.</p>
+            <p>Regulatory policies and AI governance play a crucial role in preventing misuse and ensuring compliance 
+               with ethical standards. We advocate for open-source AI research, collaborative policymaking, 
+               and rigorous testing to ensure that AI benefits humanity while minimizing potential risks. 
+               AI should not only be intelligent but also accountable, unbiased, and aligned with human values.</p>
+        </div>
+        <img src="{{ url_for('static', filename='images/images.jpeg') }}" alt="AI Image 4">
+    </div>
+
+</section>
+
+
+
+
+<!-- Contact Section -->
+<section class="contact-container">
+    <!-- Left: Contact Details -->
+    <div class="contact-details">
+        <h2>Contact Information</h2>
+        <p><strong>Email:</strong> example@tlabz.com</p>
+        <p><strong>Phone:</strong> +91 944 567 890</p>
+        <p><strong>Address:</strong> 156 Street, City, India -600000</p>
+    </div>
+
+    <!-- Right: Contact Form -->
+    <div class="contact-form">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <div class="input-group">
+                <input type="email" id="email" placeholder="Your Email" required>
+            </div>
+            <div class="input-group">
+                <textarea id="message" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit">Send</button>
+            <p id="statusMessage"></p>
+        </form>
+    </div>
+</section>
+
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+{% endblock %}

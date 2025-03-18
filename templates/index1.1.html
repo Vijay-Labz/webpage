@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S-Lab - AI Innovations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="logo">S-Lab</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#technology">Technology</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <h1>Innovating the Future with AI</h1>
+        <p>"Empowering businesses with next-gen AI solutions"</p>
+        <div class="carousel">
+            <img src="{{ url_for('static', filename='slide1.jpg') }}" class="slide" alt="Slide 1">
+            <img src="{{ url_for('static', filename='slide2.jpg') }}" class="slide" alt="Slide 2">
+            <img src="{{ url_for('static', filename='slide3.jpg') }}" class="slide" alt="Slide 3">
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="info-section">
+        <img src="{{ url_for('static', filename='about.jpg') }}" alt="About AI">
+        <div class="text-content">
+            <h2>About Us</h2>
+            <p>S-Lab is dedicated to revolutionizing AI-driven solutions to enhance business efficiency and growth.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="info-section">
+        <div class="text-content">
+            <h2>Our Services</h2>
+            <p>We offer AI-powered automation, data analytics, machine learning solutions, and more.</p>
+        </div>
+        <img src="{{ url_for('static', filename='services.jpg') }}" alt="Our Services">
+    </section>
+
+    <!-- Technology Section -->
+    <section id="technology" class="info-section">
+        <img src="{{ url_for('static', filename='technology.jpg') }}" alt="Technology">
+        <div class="text-content">
+            <h2>Our Technology</h2>
+            <p>Utilizing the latest advancements in deep learning, NLP, and AI frameworks.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <p>Have questions? Reach us via email.</p>
+        <form id="contactForm">
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <p id="responseMessage"></p>
+        <p><strong>Email:</strong> contact@slab.com</p>
+        <p><strong>Phone:</strong> +1 234 567 890</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 S-Lab. All rights reserved.</p>
+        <ul class="footer-links">
+            <li><a href="#privacy">Privacy Policy</a></li>
+            <li><a href="#terms">Terms of Service</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

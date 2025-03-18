@@ -1,0 +1,129 @@
+/* Blog Page Styles */
+.blog-section {
+    width: 100%;
+    padding: 60px 5%;
+    background: linear-gradient(to right, #0f172a, #1e293b); /* Professional Dark Gradient */
+    color: #ffffff;
+    text-align: center;
+}
+
+.blog-section h1 {
+    font-size: 3em;
+    color: #ffffff;
+    margin-bottom: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Blog Grid Layout - 2 Columns */
+.blog-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Blog Post Cards */
+.blog-post {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: left;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease-in-out forwards;
+}
+
+/* Hover Effects */
+.blog-post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Blog Post Titles */
+.blog-post h2 {
+    font-size: 1.8em;
+    color: #222;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Blog Content */
+.blog-post p {
+    font-size: 1.1em;
+    color: #444;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Read More Button */
+.blog-post a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.blog-post a:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Scroll Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .blog-container {
+        grid-template-columns: 1fr; /* Single column layout on smaller screens */
+    }
+
+    .blog-post h2 {
+        font-size: 1.6em;
+    }
+
+    .blog-post p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-section {
+        padding: 40px 10px;
+    }
+
+    .blog-post {
+        padding: 20px;
+    }
+
+    .blog-post h2 {
+        font-size: 1.5em;
+    }
+
+    .blog-post p {
+        font-size: 0.95em;
+    }
+
+    .blog-post a {
+        font-size: 1em;
+        padding: 8px 15px;
+    }
+}

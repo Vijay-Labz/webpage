@@ -1,0 +1,233 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Full-Page Hero Section with Background Image Slider */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+#imageSliderContainer {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+/* Image Slider */
+#imageSlider {
+    width: 400%; /* Instead of 400vw */
+    height: 100vh;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 1s ease-in-out;
+}
+
+/* Each slide takes up full viewport */
+.slide {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Ensure images fit perfectly */
+.slide img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+
+
+/* Quote Overlay */
+.quote-overlay {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 24px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Slider Dots */
+.slider-dots {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.dot.active {
+    opacity: 1;
+    background: #007BFF;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        height: 100vh;
+    }
+
+    .slider-dots {
+        bottom: 3%;
+    }
+}
+
+
+/* Features Section */
+.features {
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+/* Feature Row - Full Width with Alternating Backgrounds */
+.feature-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    padding: 50px 5%; /* Adjusted padding */
+    border-radius: 0; /* Full width, no border-radius */
+    width: 100vw; /* Ensure full width */
+    padding: 50px 5%;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Alternating Colors for Each Row */
+.feature-row:nth-child(odd) {
+    background: linear-gradient(135deg, #f4f4f4, #e0e0e0); /* Light Gray */
+}
+
+.feature-row:nth-child(even) {
+    background: linear-gradient(135deg, #e8f0ff, #cce5ff); /* Soft Blue */
+}
+
+/* Left Image, Right Text */
+.feature-row left {
+    flex-direction: row;
+}
+
+/* Right Image, Left Text */
+.feature-row right {
+    flex-direction: row-reverse;
+}
+
+/* Image Styling */
+.feature-row img {
+    width: 40%;
+    max-width: 450px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.feature-row img:hover {
+    transform: scale(1.05);
+}
+
+/* Text Content */
+.feature-text {
+    width: 50%;
+    text-align: left;
+    padding: 20px;
+    color: #333; /* Dark Text for contrast */
+}
+
+.feature-text h2 {
+    font-size: 28px;
+    color: #004085; /* Dark Blue for heading */
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.feature-text h2::after {
+    content: "";
+    width: 50px;
+    height: 4px;
+    background: #004085;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.feature-text p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Fade-In & Slide-Up Animation */
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Scroll Animation - Fade in on view */
+.feature-row.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .feature-row {
+        flex-direction: column !important; /* Stack on mobile */
+        text-align: center;
+        width: 100%; /* Ensure full width */
+    }
+
+    .feature-text {
+        width: 90%;
+        text-align: center;
+    }
+
+    .feature-row img {
+        width: 90%;
+    }
+}

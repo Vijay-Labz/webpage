@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="technology-section">
+    <h1>AI Technology</h1>
+    <p>Explore cutting-edge AI technologies and advancements.</p>
+
+    <div class="technology-grid">
+        <div class="technology-card">
+            <img src="{{ url_for('static', filename='images/machine_learning.jpg') }}" alt="Machine Learning">
+            <h2>Machine Learning</h2>
+            <p>AI systems that learn from data to make predictions and decisions.</p>
+            <a href="#">Learn More</a>
+        </div>
+
+        <div class="technology-card">
+            <img src="{{ url_for('static', filename='images/deep_learning.jpg') }}" alt="Deep Learning">
+            <h2>Deep Learning</h2>
+            <p>Advanced neural networks enabling speech, vision, and text recognition.</p>
+            <a href="#">Learn More</a>
+        </div>
+
+        <div class="technology-card">
+            <img src="{{ url_for('static', filename='images/computer_vision.jpg') }}" alt="Computer Vision">
+            <h2>Computer Vision</h2>
+            <p>AI that interprets images, videos, and real-world scenes.</p>
+            <a href="#">Learn More</a>
+        </div>
+
+        <div class="technology-card">
+            <img src="{{ url_for('static', filename='images/nlp.jpg') }}" alt="NLP">
+            <h2>Natural Language Processing</h2>
+            <p>AI-powered text analysis, translation, and speech understanding.</p>
+            <a href="#">Learn More</a>
+        </div>
+
+        <div class="technology-card">
+            <img src="{{ url_for('static', filename='images/robotics.jpg') }}" alt="Robotics">
+            <h2>AI in Robotics</h2>
+            <p>AI-driven robots enhancing automation and efficiency in industries.</p>
+            <a href="#">Learn More</a>
+        </div>
+
+        <div class="technology-card">
+            <img src="{{ url_for('static', filename='images/generative_ai.jpg') }}" alt="Generative AI">
+            <h2>Generative AI</h2>
+            <p>AI creating new content, from images to music and text.</p>
+            <a href="#">Learn More</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

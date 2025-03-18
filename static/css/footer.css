@@ -1,0 +1,121 @@
+
+
+/* Footer Styles */
+
+.footer {
+    background: #414141;
+    color: white;
+    padding: 3px 0;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: auto;
+    padding: 15px;
+}
+
+/* Footer Logo */
+.footer-logo h2 {
+    font-size: 1.8em;
+    color: #007BFF;
+}
+
+.footer-logo p {
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+/* Footer Links */
+.footer-links, .footer-contact, .footer-social {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.footer-links h3, .footer-contact h3, .footer-social h3 {
+    font-size: 1.1em;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 6px 0;
+}
+
+.footer-links ul li a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 0.95em;
+}
+
+.footer-links ul li a:hover {
+    color: #007BFF;
+}
+
+/* Contact Section */
+.footer-contact p {
+    font-size: 0.85em;
+    color: #aaa;
+}
+
+.footer-contact a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+/* Social Media Icons */
+.footer-social .social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+.footer-social .social-icon {
+    color: #ddd;
+    font-size: 1.4em;
+    margin: 0 8px;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 50%;
+    background: #222;
+    transition: all 0.3s ease;
+}
+
+.footer-social .social-icon i {
+    line-height: 35px;
+}
+
+.footer-social .social-icon:hover {
+    background: #007BFF;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    margin-top: 15px;
+    padding-top: 8px;
+    border-top: 1px solid #222;
+    font-size: 0.85em;
+    color: #aaa;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}

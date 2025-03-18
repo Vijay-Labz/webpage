@@ -1,0 +1,361 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* General Styles */
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: linear-gradient(90deg, #007BFF, #0056b3);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Navbar Logo */
+.navbar .logo {
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+}
+
+/* Nav Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+/* Nav Links - Desktop */
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffcc00;
+}
+
+/* Hamburger Menu - Mobile */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    padding: 100px 20px;
+    text-align: center;
+    background: #f4f4f4;
+}
+
+/* Info Sections */
+.info-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px;
+    gap: 20px;
+}
+
+.info-section img {
+    width: 40%;
+    border-radius: 10px;
+}
+
+.text-content {
+    max-width: 50%;
+}
+
+/* Contact Section */
+.contact-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* Contact Form */
+#contactForm {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#contactForm input, 
+#contactForm textarea {
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    /* Adjust navbar */
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background: rgba(0, 123, 255, 0.9);
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 10px 0;
+    }
+
+    /* Show hamburger menu */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Make sections stack */
+    .info-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info-section img {
+        width: 80%;
+    }
+
+    .text-content {
+        max-width: 90%;
+    }
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 150px 20px;
+    background: linear-gradient(to right, #0048a1, #0088ff);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 42px;
+    font-weight: 600;
+}
+
+.hero p {
+    font-size: 18px;
+    margin: 10px 0;
+    font-weight: 300;
+}
+
+/* Carousel */
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.slide {
+    width: 100%;
+    animation: slideShow 12s infinite;
+    border-radius: 12px;
+}
+
+@keyframes slideShow {
+    0% { opacity: 1; }
+    33% { opacity: 0; }
+    66% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Info Sections */
+.info-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 100px;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 30px 0;
+    border-radius: 12px;
+}
+
+.info-section img {
+    max-width: 45%;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.text-content {
+    max-width: 50%;
+}
+
+.text-content h2 {
+    font-size: 28px;
+    color: #007BFF;
+}
+
+.text-content p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Contact Section */
+.contact-section {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(to right, #007BFF, #0056b3);
+    color: white;
+}
+
+.contact-section h2 {
+    font-size: 30px;
+}
+
+.contact-section form {
+    max-width: 400px;
+    margin: 20px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-section input, .contact-section textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.contact-section input:focus, .contact-section textarea:focus {
+    border-color: #ffcc00;
+    outline: none;
+    box-shadow: 0px 0px 8px rgba(255, 204, 0, 0.5);
+}
+
+.contact-section button {
+    padding: 12px;
+    width: 100%;
+    background: #ffcc00;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.contact-section button:hover {
+    background: #ffdd44;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.footer-links a {
+    color: #ffcc00;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .info-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .info-section img {
+        max-width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .text-content {
+        max-width: 100%;
+    }
+
+    .contact-section form {
+        width: 90%;
+    }
+}

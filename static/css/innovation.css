@@ -1,0 +1,92 @@
+/* AI Innovation Page Styles */
+.innovation-section {
+    width: 100%;
+    padding: 50px 20px;
+    text-align: center;
+    background: linear-gradient(to right, #0a0f1a, #16213e); /* Professional Dark Gradient */
+}
+
+.innovation-section h1 {
+    font-size: 2.5em;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.innovation-section p {
+    font-size: 1.2em;
+    color: #cbd5e1;
+    margin-bottom: 40px;
+}
+
+/* Innovation Grid */
+.innovation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Individual Innovation Card */
+.innovation-card {
+    background: #1e293b; /* Dark Card Background */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: center;
+    color: white;
+}
+
+.innovation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.innovation-card h2 {
+    font-size: 1.8em;
+    color: #f8fafc;
+    margin: 15px 0;
+}
+
+.innovation-card p {
+    font-size: 1em;
+    color: #cbd5e1;
+    margin-bottom: 15px;
+}
+
+/* Read More Button */
+.innovation-card a {
+    display: inline-block;
+    padding: 10px 18px;
+    background: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background 0.3s ease-in-out;
+}
+
+.innovation-card a:hover {
+    background: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .innovation-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .innovation-card {
+        padding: 15px;
+    }
+
+    .innovation-card h2 {
+        font-size: 1.5em;
+    }
+
+    .innovation-card p {
+        font-size: 0.9em;
+    }
+}
